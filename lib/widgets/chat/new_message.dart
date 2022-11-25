@@ -10,7 +10,7 @@ class NewMessage extends StatefulWidget {
 }
 
 class _NewMessageState extends State<NewMessage> {
-  final _controller = new TextEditingController();
+  final _controller = TextEditingController();
   var _enteredMessage = '';
 
   void _sendMessage() async {
@@ -40,6 +40,9 @@ class _NewMessageState extends State<NewMessage> {
           Expanded(
             child: TextField(
               controller: _controller,
+              autocorrect: true,
+              textCapitalization: TextCapitalization.sentences,
+              enableSuggestions: true,
               decoration: const InputDecoration(labelText: "Send a message.."),
               onChanged: (value) {
                 setState(() {

@@ -82,6 +82,9 @@ class _AuthFormState extends State<AuthForm> {
                       return null;
                     }),
                     keyboardType: TextInputType.emailAddress,
+                    autocorrect: false,
+                    textCapitalization: TextCapitalization.none,
+                    enableSuggestions: false,
                     decoration: const InputDecoration(
                       labelText: 'Email address',
                     ),
@@ -92,6 +95,9 @@ class _AuthFormState extends State<AuthForm> {
                   if (!_isLogin)
                     TextFormField(
                       key: const ValueKey('username'),
+                      autocorrect: true,
+                      textCapitalization: TextCapitalization.words,
+                      enableSuggestions: false,
                       validator: (value) {
                         if (value.isEmpty || value.length < 4) {
                           return "Please enter at least 4 charcters";
