@@ -1,6 +1,7 @@
 # firebase_chat
 
-A new Flutter project.
+This Flutter project leverage the Firebase SDK and firebase features like Firestore, Cloud Storage,
+Cloud Functions and much more to make a flutter chatting app.
 
 ## Getting Started
 
